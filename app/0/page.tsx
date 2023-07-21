@@ -15,7 +15,7 @@ export default function Level0Page() {
   );
 }
 
-export function NextLevelPrompt() {
+function NextLevelPrompt() {
   return (
     <>
       <Card label="开始下一步">
@@ -26,7 +26,7 @@ export function NextLevelPrompt() {
   );
 }
 
-export function CheckingView({ complete }: { complete(): void }) {
+function CheckingView({ complete }: { complete(): void }) {
   const [password, setPassword] = useState("");
 
   return (
