@@ -6,8 +6,18 @@ import Link from "next/link";
 
 export const revalidate = 0;
 
+const available = false;
+
 export default function Home() {
   const level = validateLevel(0);
+
+  if (!available) {
+    return (
+      <div className="w-full h-screen flex items-center justify-center font-bold text-lg">
+        敬请期待!
+      </div>
+    );
+  }
 
   return (
     <>

@@ -10,7 +10,7 @@ export async function MessagesCard() {
   >(redis.MESSAGES);
 
   return (
-    <Card label="他们的留言">
+    <Card className="indent-0" label="他们的留言">
       {messages?.map(({ message, nickname }, index) => {
         return (
           <div key={index}>
