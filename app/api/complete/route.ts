@@ -8,11 +8,12 @@ export async function POST(request: NextRequest) {
   const json = await request.json();
   const level: number = json.level;
 
-  console.log("complete level", level);
+  let passedLevel = Number(cookies().get(PAST_LEVEL_KEY)?.value);
+  passedLevel = Number.isInteger(passedLevel) ? passedLevel : 0;
 
-  const passedLevel = Number(cookies().get(PAST_LEVEL_KEY)?.value);
-
+  console.log("complete", level, passedLevel);
   if (level > passedLevel) {
+    console.log("Setting cookie");
     cookies().set(PAST_LEVEL_KEY, level.toString());
   }
 

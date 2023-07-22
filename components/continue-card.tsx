@@ -10,6 +10,7 @@ export function Continue({
   currentLevel: number;
   pastLevel: number;
 }) {
+  console.log("hello ", pastLevel);
   if (
     pastLevel === undefined ||
     Number.isNaN(pastLevel) ||
@@ -24,8 +25,6 @@ export function Continue({
   }
 
   const href = HREFS[pastLevel];
-
-  console.log("hello ", href, pastLevel);
 
   return (
     <Card label={`继续`}>
