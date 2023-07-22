@@ -7,6 +7,10 @@ export function validateLevel(currentLevel: number): number {
   const passedLevel = Number(cookies().get(PAST_LEVEL_KEY)?.value) ?? 0;
   console.log("validating level", currentLevel, passedLevel);
 
+  if (currentLevel <= 0) {
+    return passedLevel ?? 0;
+  }
+
   if (passedLevel === undefined || currentLevel > passedLevel + 1) {
     console.log("redirecting", !passedLevel, currentLevel > passedLevel + 1);
     redirect("/");
