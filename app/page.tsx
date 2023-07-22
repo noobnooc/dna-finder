@@ -6,10 +6,6 @@ import Link from "next/link";
 import { useEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    completeLevel(-1);
-  }, []);
-
   return (
     <>
       <Card label="开始">

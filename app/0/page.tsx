@@ -32,12 +32,14 @@ function CheckingView({ complete }: { complete(): void }) {
   return (
     <>
       <Card label="开始的开始">
-        作为公社里的数字游民，你的第一生存技能是获得WIFI密码 请输入 DNA 的 WIFI
-        密码以解锁下一关：
+        作为公社里的数字游民，你的第一生存技能是获得 WiFi 密码 请输入 DNA 的
+        WiFi 密码以解锁下一关：
       </Card>
-      <Card label="Wi-Fi 密码">
+      <Card label="WiFi 密码">
         <div className="flex flex-col">
           <input
+            className="mt-1 px-4 py-2 bg-white dark:bg-black border rounded-xl"
+            placeholder="输入 WiFi 密码"
             value={password}
             onChange={(event) => setPassword(event.currentTarget.value)}
           />
@@ -49,7 +51,7 @@ function CheckingView({ complete }: { complete(): void }) {
                 return;
               }
 
-              completeLevel(1);
+              completeLevel(0);
               complete();
             }}
           >
