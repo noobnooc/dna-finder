@@ -20,7 +20,7 @@ export default function RootLayout({
       <body
         className={twMerge(
           inter.className,
-          "bg-amber-50 text-black dark:bg-neutral-900 dark:text-amber-50"
+          "bg-white text-amber-900 dark:bg-neutral-900 dark:text-amber-50"
         )}
       >
         <main className="flex flex-col p-4">{children}</main>

@@ -1,5 +1,6 @@
 "use client";
 
+import { leaveAMessage } from "@/lib/leave-a-message";
 import { useState } from "react";
 
 export function Level5PageForm() {
@@ -22,7 +23,9 @@ export function Level5PageForm() {
       />
       <button
         className="mt-5 p-2 text-center rounded-xl bg-amber-500 text-white"
-        onClick={() => {}}
+        onClick={() => {
+          leaveAMessage(message, nickname);
+        }}
       >
         好了
       </button>

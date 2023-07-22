@@ -3,7 +3,9 @@
 import { Card } from "@/components/card";
 import { DATA } from "@/data/data";
 import { completeLevel } from "@/lib/complete-level";
+import Image from "next/image";
 import { useState } from "react";
+import image1 from "./1.jpg";
 
 export const revalidate = 0;
 
@@ -21,7 +23,12 @@ function NextLevelPrompt() {
   return (
     <>
       <Card label="开始下一步">
-        公社精神之一是活在当下，绝不内卷。因此你探索的第一站是咖啡厅。这是DNA先辈给你留的第一片宝藏碎片/灵魂碎片（插入图片）
+        公社精神之一是活在当下，绝不内卷。因此你探索的第一站是咖啡厅。这是DNA先辈给你留的第一片宝藏碎片/灵魂碎片
+        <Image
+          className="aspect-square rounded-full p-10 object-cover"
+          src={image1}
+          alt="图片1"
+        />
         找到此碎片中的圣物，激活下一关的钥匙（二维码）。记住当你躺平用一种轻松的姿态来观察这个世界，往往能有新的发现。
       </Card>
     </>

@@ -6,9 +6,11 @@ const HREFS = ["/0", "/1clatter", "/2totora", "/3dainty", "/4fiddler"];
 export function Continue({
   currentLevel,
   pastLevel,
+  onlyInprogress,
 }: {
   currentLevel: number;
   pastLevel: number;
+  onlyInprogress: boolean;
 }) {
   console.log("hello ", pastLevel);
   if (
@@ -21,6 +23,10 @@ export function Continue({
   }
 
   if (pastLevel >= 5) {
+    if (onlyInprogress) {
+      return <></>;
+    }
+
     return <Card label="🎉">你已经成功通关啦！</Card>;
   }
 
