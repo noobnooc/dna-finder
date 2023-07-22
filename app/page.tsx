@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export const revalidate = 0;
 
-const available = true;
+const available = false;
 
 export default function Home() {
   const level = validateLevel(0);
