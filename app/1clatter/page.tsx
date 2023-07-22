@@ -1,11 +1,9 @@
 import { Card } from "@/components/card";
 import { Completion } from "@/components/completion";
 import { Continue } from "@/components/continue-card";
-import { completeLevel } from "@/lib/complete-level";
 import { validateLevel } from "@/lib/level-checker";
-import { useEffect } from "react";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default function Level1() {
   const level = validateLevel(1);

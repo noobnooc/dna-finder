@@ -5,6 +5,8 @@ import { DATA } from "@/data/data";
 import { completeLevel } from "@/lib/complete-level";
 import { useState } from "react";
 
+export const revalidate = 0;
+
 export default function Level0Page() {
   const [checked, setChecked] = useState(false);
 

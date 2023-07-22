@@ -3,7 +3,7 @@ import { Completion } from "@/components/completion";
 import { Continue } from "@/components/continue-card";
 import { validateLevel } from "@/lib/level-checker";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default function Level3() {
   const level = validateLevel(3);

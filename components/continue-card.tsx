@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Card } from "./card";
 
+const HREFS = ["/0", "/1clatter", "/2totora", "/3dainty", "/4fiddler"];
+
 export function Continue({
   currentLevel,
   pastLevel,
@@ -16,14 +18,12 @@ export function Continue({
     return <Card label="恭喜🎉">你已经成功通关啦！</Card>;
   }
 
-  const href = ["/0", "/1clatter", "/2totora", "/3dainty", "/4fiddler"][
-    pastLevel
-  ];
+  const href = HREFS[pastLevel];
 
   return (
     <Card label={`继续`}>
-      当前已进行到{" "}
-      <Link className="underline" href={href}>
+      当前已进行到
+      <Link className="underline mx-2" href={href}>
         第{pastLevel}关
       </Link>
     </Card>

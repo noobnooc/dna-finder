@@ -3,7 +3,7 @@ import { Completion } from "@/components/completion";
 import { validateLevel } from "@/lib/level-checker";
 import { Level5PageForm } from "./form";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default function Level5() {
   validateLevel(5);
