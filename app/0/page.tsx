@@ -23,13 +23,17 @@ function NextLevelPrompt() {
   return (
     <>
       <Card label="开始下一步">
-        公社精神之一是活在当下，绝不内卷。因此你探索的第一站是咖啡厅。这是DNA先辈给你留的第一片宝藏碎片/灵魂碎片
+        公社精神之一是活在当下，绝不内卷。因此你探索的第一站是咖啡厅。这是 DNA
+        先辈给你留的第一片宝藏碎片
         <Image
           className="aspect-square rounded-full p-10 object-cover"
           src={image1}
           alt="图片1"
         />
-        找到此碎片中的圣物，激活下一关的钥匙（二维码）。记住当你躺平用一种轻松的姿态来观察这个世界，往往能有新的发现。
+        找到此碎片中的圣物，激活下一关的钥匙（二维码）。
+        <div className="opacity-80 indent-0 mt-5">
+          💡当你躺平用一种轻松的姿态来观察这个世界，往往能有新的发现。
+        </div>
       </Card>
     </>
   );
@@ -41,7 +45,7 @@ function CheckingView({ complete }: { complete(): void }) {
   return (
     <>
       <Card label="开始的开始">
-        作为公社里的数字游民，你的第一生存技能是获得 WiFi 密码 请输入 DNA 的
+        作为公社里的数字游民，你的第一生存技能是获得 WiFi 密码，请输入 DNA 的
         WiFi 密码以解锁下一关：
       </Card>
       <Card label="WiFi 密码">

@@ -27,7 +27,11 @@ export function Continue({
       return <></>;
     }
 
-    return <Card label="🎉">你已经成功通关啦！</Card>;
+    return (
+      <div className="text-lg font-bold text-center p-10">
+        🎉 你已经成功通关啦！
+      </div>
+    );
   }
 
   const href = HREFS[pastLevel];

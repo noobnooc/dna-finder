@@ -12,8 +12,8 @@ export function Card({
 }) {
   return (
     <div className="">
-      <label className="mx-4 mt-4 mb-1 text-sm opacity-60 block">{label}</label>
-      <div className={twMerge("mt-1 p-4 rounded-xl indent-8", className)}>
+      <label className="mt-4 mb-1 text-sm opacity-60 block">{label}</label>
+      <div className={twMerge("mt-4 rounded-xl indent-8", className)}>
         {children}
       </div>
     </div>

@@ -22,14 +22,17 @@ export default function Level5() {
         alt="奖杯图片"
       />
       {messageLeaved ? undefined : (
-        <Card label="恭喜">
-          恭喜你已不再是萌新游民，再次欢迎你加入DNA社区，留下一句你对公社的期待吧或其他想分享的任何内容！
+        <div>
+          <div className="mb-5">
+            恭喜你已不再是萌新游民，再次欢迎你加入DNA社区，留下一句你对公社的期待吧或其他想分享的任何内容！
+          </div>
           <Level5PageForm />
-        </Card>
+        </div>
       )}
-      <Card label="礼物">
+      <div className="mt-5">
+        🎉
         你会获得一份随机的礼物，请联系三秋，小茗或者LV在晚上八点于咖啡厅饮水机处抽取你的大奖。
-      </Card>
+      </div>
       <MessagesCard />
       <Completion level={5} />
     </>

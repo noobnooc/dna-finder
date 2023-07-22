@@ -1,11 +1,14 @@
 "use client";
 
 import { leaveAMessage } from "@/lib/leave-a-message";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export function Level5PageForm() {
   const [message, setMessage] = useState("");
   const [nickname, setNickname] = useState("");
+  const [committing, setCommitting] = useState(false);
+  const router = useRouter();
 
   return (
     <div className="flex flex-col">
@@ -22,12 +25,16 @@ export function Level5PageForm() {
         onChange={(event) => setNickname(event.currentTarget.value)}
       />
       <button
-        className="mt-5 p-2 text-center rounded-xl bg-amber-500 text-white"
-        onClick={() => {
-          leaveAMessage(message, nickname);
+        className="mt-5 p-2 text-center rounded-xl disabled:bg-gray-700 bg-amber-500 text-white"
+        disabled={committing}
+        onClick={async () => {
+          setCommitting(true);
+          await leaveAMessage(message, nickname);
+          alert("留言成功啦！");
+          router.push("/");
         }}
       >
-        好了
+        {committing ? "正在提交" : "好啦！"}
       </button>
     </div>
   );
