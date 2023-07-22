@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
   passedLevel = Number.isInteger(passedLevel) ? passedLevel : 0;
 
   console.log("complete", level, passedLevel);
-  if (level > passedLevel) {
+  if (level >= passedLevel || !passedLevel) {
     console.log("Setting cookie");
     cookies().set(PAST_LEVEL_KEY, level.toString());
   }
