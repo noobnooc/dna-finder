@@ -17,7 +17,7 @@ export default function Home() {
     return (
       <div className="w-full h-screen flex flex-col items-center justify-center font-bold text-lg">
         <Image
-          className="aspect-square rounded-full p-10 object-cover"
+          className="aspect-square rounded-full mx-10 mb-10 object-cover"
           src={finderImage}
           alt="钥匙图片"
         />
