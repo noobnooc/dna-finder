@@ -3,6 +3,8 @@ import { Continue } from "@/components/continue-card";
 import { MessagesCard } from "@/components/messages-card";
 import { validateLevel } from "@/lib/level-checker";
 import Link from "next/link";
+import finderImage from "../public/finder.jpg";
+import Image from "next/image";
 
 export const revalidate = 0;
 
@@ -13,8 +15,17 @@ export default function Home() {
 
   if (!available) {
     return (
-      <div className="w-full h-screen flex items-center justify-center font-bold text-lg">
-        敬请期待!
+      <div className="w-full h-screen flex flex-col items-center justify-center font-bold text-lg">
+        <Image
+          className="aspect-square rounded-full p-10 object-cover"
+          src={finderImage}
+          alt="钥匙图片"
+        />
+        游民传说之社区寻宝
+        <div className="my-5 opacity-60">时间6月23日17：00～20：00开始寻宝</div>
+        <div className="">
+          首次内测15人～参与游戏的条件是，每人准备一份自己觉得有意义的小礼物（可以是实物也可以是给对方做一顿饭、唱一首歌…），并在礼物登记表上写上你的编号和名字。如果你能成功通过所以关卡，就可以在明晚8点于咖啡厅抽取一份连我们都不知道的神秘礼品。如果你想参与的话，就赶紧来咖啡厅登记吧！
+        </div>
       </div>
     );
   }
