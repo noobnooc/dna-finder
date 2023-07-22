@@ -1,16 +1,24 @@
 import { ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
 export function Card({
   label,
   children,
+  className,
 }: {
   label: string;
   children: ReactNode;
+  className?: string;
 }) {
   return (
     <div className="">
       <label className="mx-4 mt-4 mb-1 text-sm opacity-60 block">{label}</label>
-      <div className="mt-1 p-4 bg-white dark:bg-black border rounded-xl">
+      <div
+        className={twMerge(
+          "mt-1 p-4 bg-white dark:bg-black border rounded-xl",
+          className
+        )}
+      >
         {children}
       </div>
     </div>

@@ -21,13 +21,13 @@ export function Continue({
   }
 
   if (pastLevel >= 5) {
-    return <Card label="恭喜🎉">你已经成功通关啦！</Card>;
+    return <Card label="🎉">你已经成功通关啦！</Card>;
   }
 
   const href = HREFS[pastLevel];
 
   return (
-    <Card label={`继续`}>
+    <Card className="bg-amber-100 dark:bg-amber-200/20" label={`继续`}>
       当前已进行到
       <Link className="underline mx-2" href={href}>
         第{pastLevel}关

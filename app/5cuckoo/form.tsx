@@ -21,7 +21,7 @@ export function Level5PageForm() {
         onChange={(event) => setNickname(event.currentTarget.value)}
       />
       <button
-        className="mt-5 p-2 text-center rounded-xl bg-blue-500 text-white"
+        className="mt-5 p-2 text-center rounded-xl bg-amber-500 text-white"
         onClick={() => {}}
       >
         好了

@@ -46,7 +46,7 @@ function CheckingView({ complete }: { complete(): void }) {
             onChange={(event) => setPassword(event.currentTarget.value)}
           />
           <button
-            className="mt-5 p-2 text-center rounded-xl bg-blue-500 text-white"
+            className="mt-5 p-2 text-center rounded-xl bg-amber-500 text-white"
             onClick={() => {
               if (password !== DATA.wifiPassword) {
                 alert("密码错误");
