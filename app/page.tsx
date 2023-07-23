@@ -35,12 +35,12 @@ export default function Home() {
       {level > 1 ? (
         <>
           <Continue currentLevel={0} pastLevel={level} onlyInprogress={false} />
-          <Link
+          {/* <Link
             className="mt-5 p-3 text-center rounded-xl bg-red-500 text-white"
             href="/reset"
           >
             重新开始
-          </Link>
+          </Link> */}
         </>
       ) : (
         <>
