@@ -20,6 +20,7 @@ export function Content() {
     </div>
   ) : (
     <div className="flex flex-col">
+      <div className="text-lg font-bold text-center mt-10">DNA 星巴克</div>
       <Image
         className="aspect-square rounded-full p-10 object-cover"
         src={keyImage}

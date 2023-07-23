@@ -19,6 +19,7 @@ export function Content() {
     </div>
   ) : (
     <div className="font-bold mb-5 text-xl flex flex-col">
+      <div className="text-lg font-bold text-center mt-10">小巨蛋</div>
       <Image
         className="aspect-square rounded-full p-10 object-cover"
         src={keyImage}

@@ -1,4 +1,3 @@
-import { Card } from "@/components/card";
 import { Completion } from "@/components/completion";
 import { validateLevel } from "@/lib/level-checker";
 import { Level5PageForm } from "./form";
@@ -6,6 +5,8 @@ import { MessagesCard } from "@/components/messages-card";
 import { cookies } from "next/headers";
 import Image from "next/image";
 import cupImage from "../../public/cup.jpg";
+import photo from "./photo.png";
+import { Team } from "./team";
 
 export const revalidate = 0;
 
@@ -16,11 +17,15 @@ export default function Level5() {
 
   return (
     <>
+      <div className="text-lg font-bold text-center mt-10">奥体中心</div>
       <Image
         className="aspect-square rounded-full p-10 object-cover"
         src={cupImage}
         alt="奖杯图片"
       />
+      <div className="font-bold mb-5 indent-0 text-xl text-center">
+        恭喜你已通关！
+      </div>
       {messageLeaved ? undefined : (
         <div>
           <div className="mb-5">
@@ -31,8 +36,9 @@ export default function Level5() {
       )}
       <div className="mt-5">
         🎉
-        你会获得一份随机的礼物，请联系三秋，小茗或者LV在晚上八点于咖啡厅饮水机处抽取你的大奖。
+        你会获得一份随机的礼物，请在咖啡厅抽奖箱处抽取接龙号码，凭抽到的号码向对应接龙号码的玩家自助索取你的神秘大奖。
       </div>
+      <Team />
       <MessagesCard />
       <Completion level={5} />
     </>
