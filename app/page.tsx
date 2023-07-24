@@ -1,4 +1,3 @@
-import { Card } from "@/components/card";
 import { Continue } from "@/components/continue-card";
 import { MessagesCard } from "@/components/messages-card";
 import { validateLevel } from "@/lib/level-checker";
@@ -51,7 +50,9 @@ export default function Home() {
               alt="钥匙图片"
             />
             欢迎新游民来到 DNA
-            公社，你的先辈们给你留下了一份巨额（也许）的宝藏。只有成功解锁五个关卡才能拿到最终的实体宝藏。别担心，你可以随时大胆求助在地的小伙伴，他们都会热心的帮助你，并且安吉同乡会的先辈们也会与你同在。请开始你的探险，祝你好运!
+            公社，这是一个你的先辈们为创造的通关小游戏，希望你能通过这个游戏对
+            DNA
+            进行一些探索。别担心，你可以随时大胆求助在地的小伙伴，他们都会热心的帮助你，并且安吉同乡会的先辈们也会与你同在。请开始你的探险，祝你好运!
           </div>
           <Link
             className="mt-5 p-3 text-center rounded-xl bg-amber-500 text-white"

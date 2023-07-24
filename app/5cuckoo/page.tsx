@@ -34,10 +34,10 @@ export default function Level5() {
           <Level5PageForm />
         </div>
       )}
-      <div className="mt-5">
+      {/* <div className="mt-5">
         🎉
         你会获得一份随机的礼物，请在咖啡厅抽奖箱处抽取接龙号码，凭抽到的号码向对应接龙号码的玩家自助索取你的神秘大奖。
-      </div>
+      </div> */}
       <Team />
       <MessagesCard />
       <Completion level={5} />

@@ -22,7 +22,7 @@ export default function Level0Page() {
 function NextLevelPrompt() {
   return (
     <>
-      <Card label="开始下一步">
+      <div>
         公社精神之一是活在当下，绝不内卷。因此你探索的第一站是咖啡厅。这是 DNA
         先辈给你留的第一片宝藏碎片
         <Image
@@ -34,7 +34,7 @@ function NextLevelPrompt() {
         <div className="opacity-80 indent-0 mt-5">
           💡当你躺平用一种轻松的姿态来观察这个世界，往往能有新的发现。
         </div>
-      </Card>
+      </div>
     </>
   );
 }
