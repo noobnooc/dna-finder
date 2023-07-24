@@ -1,3 +1,5 @@
+⚠️ 这是一个赶工项目，没有文档没有注释没有抽象，所以代码质量很差，不知道这是啥的请忽略。🫣
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
