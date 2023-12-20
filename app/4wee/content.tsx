@@ -15,11 +15,12 @@ export function Content() {
         src={image1}
         alt="图片 1"
       />
-      作为数字游民，拥有一个强健的体魄是工作和娱乐的根本，所以你的最后一道神秘关卡就在DNA奥体中心（篮球场）。神秘石洞是独处的好地方，就是蚊子有点多，最后一把钥匙就在这里。
+      酒足饭饱后，抬头便能看到公社的至高点上写着 “全世界有趣的人联合起来”
+      ，或许有一股神秘的力量吸引你去二楼KTV区高歌一曲。有趣才是关键，不用担心跑调。第四把钥匙就藏在声音发出的地方（设备）。加油，你就要通关了！
     </div>
   ) : (
     <div className="font-bold mb-5 text-xl flex flex-col">
-      <div className="text-lg font-bold text-center mt-10">小巨蛋</div>
+      <div className="text-lg font-bold text-center mt-10">厨房餐厅</div>
       <Image
         className="aspect-square rounded-full p-10 object-cover"
         src={keyImage}

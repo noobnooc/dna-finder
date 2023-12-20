@@ -1,7 +1,15 @@
 import Link from "next/link";
 import { Card } from "./card";
 
-const HREFS = ["/0", "/1clatter", "/2totora", "/3dainty", "/4fiddler"];
+const HREFS = [
+  "/0",
+  "/1clatter",
+  "/2totora",
+  "/3dainty",
+  "/4wee",
+  "/5fiddler",
+  "/6cuckoo",
+];
 
 export function Continue({
   currentLevel,
@@ -12,7 +20,6 @@ export function Continue({
   pastLevel: number;
   onlyInprogress: boolean;
 }) {
-  console.log("hello ", pastLevel);
   if (
     pastLevel === undefined ||
     Number.isNaN(pastLevel) ||
@@ -22,7 +29,9 @@ export function Continue({
     return <></>;
   }
 
-  if (pastLevel >= 5) {
+  const href = HREFS[pastLevel];
+
+  if (pastLevel >= 6) {
     if (onlyInprogress) {
       return <></>;
     }
@@ -30,17 +39,18 @@ export function Continue({
     return (
       <div className="text-lg font-bold text-center p-10">
         🎉 你已经成功通关啦！
+        <Link className="underline mx-2" href={href}>
+          去留言 →
+        </Link>
       </div>
     );
   }
 
-  const href = HREFS[pastLevel];
-
   return (
-    <Card className="bg-amber-100 dark:bg-amber-200/20" label={`继续`}>
-      当前已进行到
+    <Card className="bg-amber-100 dark:bg-amber-200/20 py-5" label={`继续`}>
+      当前已进行到第{pastLevel}关。
       <Link className="underline mx-2" href={href}>
-        第{pastLevel}关
+        下一关 →
       </Link>
     </Card>
   );

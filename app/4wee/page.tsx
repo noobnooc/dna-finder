@@ -8,8 +8,8 @@ import { Content } from "./content";
 
 export const revalidate = 0;
 
-export default function Level4() {
-  const level = validateLevel(4);
+export default function Level3() {
+  const level = validateLevel(3);
 
   return (
     <>

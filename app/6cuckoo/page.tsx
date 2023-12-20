@@ -11,7 +11,7 @@ import { Team } from "./team";
 export const revalidate = 0;
 
 export default function Level5() {
-  validateLevel(5);
+  validateLevel(6);
 
   const messageLeaved = Boolean(cookies().get("message-leaved"));
 
@@ -40,7 +40,7 @@ export default function Level5() {
       </div> */}
       <Team />
       <MessagesCard />
-      <Completion level={5} />
+      <Completion level={6} />
     </>
   );
 }
